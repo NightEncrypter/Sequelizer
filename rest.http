@@ -1,0 +1,36 @@
+
+POST http://localhost:8000/product
+content-type: application/json
+
+    {
+    "product":{
+           
+        "name":"Hooki",
+        "model":"galaxy",
+        "quantity":7,
+        "brand":"Samsung"
+    },
+     "feature":{
+    "face_unlock":true,
+    "ram":"4gb",
+    "storage":"128",
+    "processor":"mediatek"
+    }
+    }
+
+
+####
+POST  http://localhost:8000/feature
+content-type: application/json
+
+{
+    "face_unlock":true,
+    "ram":"4gb",
+    "storage":"128",
+    "processor":"mediatek",
+    "productId":112
+}
+
+####
+GET http://localhost:8000/product
+
